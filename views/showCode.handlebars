@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <!--css-->
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/bootstrap-theme.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope|Vibur' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300italic' rel='stylesheet' type='text/css'>
+    <link href="/css/shared.css" rel="stylesheet" type="text/css">
+    <link href="/css/eventCode.css" rel="stylesheet" type="text/css">
+    
+    <!--js-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="/js/eventCode.js"></script>
+    <script src="/js/shared.js"></script>
+    
+    <div class='title'>
+      <div class='butt'>
+        <a onclick="javascript:window.history.back();return false;" STYLE="text-decoration: none"><-</a> 
+      </div>
+    	SUMMON 
+      <div class='home'>
+        <a href="/"><img src="/images/home.png"></a>
+      </div>
+    </div> 
+	</head>
+	<body>
+		<div class='content'>
+      Your event has been created!<br>
+      Share the code below <br>
+      for people to attend:<br><br>
+      {{url}}<br>
+      
+      <a href="https://www.google.com/"><img src="/images/icon_google_64.png"></a>
+      <a href="https://www.facebook.com/"><img src="/images/icon_facebook_64.png"></a>
+      <img src="/images/phone2.png">
+    </div>
+
+    <div class='view' align='center'>
+       <div class="buttons">
+            <a href="/event/{{url}}" align=center STYLE="text-decoration: none">View Event</a>
+        </div>
+    </div>
+	</body>
+</html>

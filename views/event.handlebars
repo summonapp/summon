@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--css-->
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/bootstrap-theme.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope|Vibur' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300italic' rel='stylesheet' type='text/css'>
+    <link href="/css/shared.css" rel="stylesheet" type="text/css">
+    <link href="/css/viewEvent.css" rel="stylesheet" type="text/css">
+    
+    <!--js-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="/js/viewEvent.js"></script>
+    <script src="/js/shared.js"></script>
+    
+    <!--content-->
+    <div class='title'>
+      <div class='butt'>
+        <a onclick="javascript:window.history.back();return false;" STYLE="text-decoration: none"><-</a> 
+      </div>
+    	SUMMON 
+      <div class='home'>
+        <a href="/"><img src="/images/home.png"></a>
+      </div>
+    </div> 
+	</head>
+	<body>
+		<div class = 'banner'>View Event</div>
+    <div class='content'>
+      <div id='notification-accept'>
+        You accepted. Great!
+      </div>
+      <div id='notification-reject'>
+        You declined, BOOO!
+      </div>
+
+      {{#if respond}}
+      <div id='pending'></div>
+      <div class='head' id='event'>Event Title</div>
+      <div class='description' id='event-content'>{{title}}</div>
+      <div class='head' id='what'>What</div>
+      <div class='description' id='what-content'>{{what}}</div>
+      <div class='head' id='when'>When</div>
+      <div class='description' id='when-content'>{{when}}</div>
+      <div class='head' id='where'>Where</div>
+      <div class='description' id='where-content'>{{where}}</div>
+      <div class='head' id='how'>How</div>
+      <div class='description' id='how-content'>{{how}}</div>
+
+      <div class='head' id='attending'>Attending</div>
+      <div class='description' id='attending-content'>
+        <div align=center>
+          {{#if attending.length}}
+						{{#each attending}}
+							<div>{{this}}</div>
+						{{/each}}
+					{{else}}
+						No one is attending yet.
+					{{/if}}
+        </div>   
+    	</div>
+    	{{else}}
+	    	Event not found, or you're not invited.
+			{{/if}}
+			<br>
+      <div align =center id="button"></div>
+    </div>
+
+    <script>
+			function myFunction() {
+				<!--Invalid event-->
+				if({{respond}} == 0)
+					return "";
+				<!--Accepted event-->
+				else if({{respond}} == 2)
+					return "<form method='post'><input type='hidden' value=3 name='respond'></input><button id='reject' formaction='/event/{{url}}'>Reject</button></form>";
+				<!--Declined event-->
+				else
+					return "<form method='post'><input type='hidden' value=2 name='respond'></input><button id='accept' formaction='/event/{{url}}'>Accept</button></form>";
+			}
+			function pendingEvent() {
+				<!--Pending event-->
+				if({{respond}} == 1)
+					return "This event is pending.";
+				else if({{respond}} == 2)
+					return "You are attending."
+				else if({{respond}} == 3)
+					return "You are not attending."
+				return ""
+			}
+			document.getElementById("button").innerHTML=myFunction();
+			document.getElementById("pending").innerHTML=pendingEvent();
+		</script>
+	</body>
+</html>

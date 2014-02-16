@@ -1,0 +1,20 @@
+.content{
+    font-family: 'Annie Use Your Telescope', sans-serif;
+    font-size: 150%;
+    padding-top: 70px;
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    background:url('../img/postit2.png');
+   
+}
+
+.view {
+    font-family: 'Annie Use Your Telescope', sans-serif;
+    font-size: 130%;
+    
+}
+
+a:hover {
+    color: #0099FF;
+}

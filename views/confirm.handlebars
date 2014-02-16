@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--css-->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope|Vibur' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300italic' rel='stylesheet' type='text/css'>
+    <link href="/css/shared.css" rel="stylesheet" type="text/css">
+    <link href="/css/confirmCreateEvent.css" rel="stylesheet" type="text/css">
+    
+    <!--js-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="/js/confirmCreateEvent.js"></script>
+    <script src="/js/shared.js"></script>
+    
+    <!--content-->
+    <div class='title'>
+      <div class='butt'>
+        <a onclick="javascript:window.history.back();return false;" STYLE="text-decoration: none"><-</a> 
+      </div>
+      SUMMON 
+      <div class='home'>
+        <a href="/"><img src="/images/home.png"></a>
+      </div>
+    </div> 
+	</head>
+	<body>
+		<div class='banner'>Confirm Event</div>
+		<div class="content">
+      <div class='head' id='event'>Event Title</div>
+      <div class='description' id='event-content'>{{eventTitle}}</div>
+
+      <div class='head' id='what'>What</div>
+      <div class='description' id='what-content'>{{what}}</div>
+
+      <div class='head' id='when'>When</div>
+      <div class='description' id='when-content'>{{when}}</div>
+      <div class='head' id='where'>Where</div>
+      <div class='description' id='where-content'>{{where}}</div>
+      <div class='head' id='how'>How</div>
+      <div class='description' id='how-content'>{{how}}</div>
+      
+      <div align=center class="buttons">
+          <br>
+          <form method="post" action="/event/showCode">
+			      <input type="hidden" value={{eventTitle}} name="eventTitle"></input>
+			      <input type="hidden" value={{what}} name="what"></input>
+			      <input type="hidden" value={{when}} name="when"></input>
+			      <input type="hidden" value={{where}} name="where"></input>
+			      <input type="hidden" value={{how}} name="how"></input>
+			      <button type="submit" formaction="/event/create">Back</button>
+				    <button type="submit">Create</button>
+					</form>
+      </div>
+    </div>
+	</body>
+</html>

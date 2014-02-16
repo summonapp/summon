@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--css-->
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/bootstrap-theme.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope|Vibur' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300italic' rel='stylesheet' type='text/css'>
+    <link href="/css/shared.css" rel="stylesheet" type="text/css">
+    <link href="/css/mainFilled.css" rel="stylesheet" type="text/css">
+    
+    <!--js-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="/js/mainFilled.js"></script>
+    <script src="/js/shared.js"></script>
+    
+    <!--content-->
+   <div class='title'>SUMMON</div>
+	</head>
+	<body>
+		<div class=container>
+      <div class=overlay>
+          <h2>My Events</h2>
+          {{#if events.length}}
+						{{#each events}}
+							<div class=event>
+			          <a href="/event/{{url}}" STYLE="text-decoration: none">{{title}}</a>
+			        </div>
+						{{/each}}
+					{{else}}
+						<div>You currently have no event</div>
+					{{/if}}
+          <br><br>
+        <div class="buttons">
+            <a href="/event/create" align=center STYLE="text-decoration: none">Create Event</a>
+            <a href="/event/addCode" align=center STYLE="text-decoration: none">Add Code</a>
+        </div>
+      </div>
+    </div>
+	</body>
+</html>
