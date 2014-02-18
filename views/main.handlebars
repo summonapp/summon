@@ -26,7 +26,7 @@
         {{#if events.length}}
 					{{#each events}}
 						<div class=event>
-			        <a href="/event/{{url}}" STYLE="text-decoration: none">{{title}}</a>
+			        <a href="/event/{{url}}" id = "determineResponse({{url}})" STYLE="text-decoration: none">{{title}}</a>
 			      </div>
 					{{/each}}
 				{{else}}
@@ -40,4 +40,18 @@
       </div>
     </div>
 	</body>
+	
+	<script>
+	    function determineResponse(url) {
+	        console.log("Made it into the function!!");
+	       for (var i = 0;  i < events.length; i++) {
+	           if (events[i].url == url)
+	                return "response" + events[i].respond;
+	       }
+	       
+	       return "";
+	    }
+	</script>
+	
+	
 </html>

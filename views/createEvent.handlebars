@@ -31,11 +31,11 @@
       <div class='content container overlay'>
       <br>
 				<form method="post" action="/event/confirm">
-		      <input type="text" {{type}}={{eventTitle}} name="eventTitle" required></input><br>
-		      <input type="text" {{type}}={{what}} name="what" required></input><br>
-		      <input type="text" {{type}}={{when}} name="when" required></input><br>
-		      <input type="text" {{type}}={{where}} name="where" required></input><br>
-		      <input type="text" {{type}}={{how}} name="how" required></input><br>
+		      <input type="text" {{type}}= "{{eventTitle}}" name="eventTitle" required></input><br>
+		      <input type="text" {{type}}= "{{what}}" name="what" required></input><br>
+		      <input type="text" {{type}}= "{{when}}" name="when" required></input><br>
+		      <input type="text" {{type}}= "{{where}}" name="where" required></input><br>
+		      <input type="text" {{type}}="{{anythingElse}}" name="anythingElse"></input><br>
 			    <input class="buttons" type="submit" value="Continue"></input>
 				</form>
 			</div>

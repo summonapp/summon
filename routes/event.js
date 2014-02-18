@@ -1,15 +1,24 @@
 var allEvents = require('../events.json');
 var myEvents = require('../myEvents.json');
+var people = require('../people.json');
 
 exports.eventInfo = function(req, res) {
 	var eventIndex = findEvent(req.params.url);
 	if(hasEvent(req.params.url) && eventIndex >= 0) {
+    var people = choose();
+    if(people==="" && (allEvents[findEvent(req.params.url)].attending.length >= 2)) {
+      allEvents[findEvent(req.params.url)].attending.pop();
+    }
+    else if(people!=="" && (allEvents[findEvent(req.params.url)].attending.length <= 15)) {
+      allEvents[findEvent(req.params.url)].attending.push(people);
+    }
+      
 		if(req.body.respond) {
 			allEvents[findEvent(req.params.url)].respond = req.body.respond;
 			if(req.body.respond == 2)
-				allEvents[findEvent(req.params.url)].attending.push("You");
+				allEvents[findEvent(req.params.url)].attending = ["You"].concat(allEvents[findEvent(req.params.url)].attending);
 			else if(req.body.respond == 3)
-				allEvents[findEvent(req.params.url)].attending.splice(allEvents[findEvent(req.params.url)].attending.indexOf("You"));
+				allEvents[findEvent(req.params.url)].attending = allEvents[findEvent(req.params.url)].attending.splice(1);
 		}
 		res.render('event', allEvents[eventIndex]);
 	}
@@ -27,7 +36,7 @@ exports.showCode = function(req, res) {
 		'when':req.body.when,
 		'where':req.body.where,
 		'how':req.body.how,
-		'attending':[]
+		'attending':["you"]
 	};
 	allEvents.push(newEvent);
 	myEvents.push(newURL);
@@ -44,7 +53,7 @@ exports.createEvent = function(req, res) {
 		'what':req.body.what||"What",
 		'when':req.body.when||"When",
 		'where':req.body.where||"Where",
-		'how':req.body.how||"How"
+		'anythingElse':req.body.how||"Anything Else?"
 	});
 };
 
@@ -68,7 +77,7 @@ exports.confirm = function(req, res) {
 		'what':req.body.what,
 		'when':req.body.when,
 		'where':req.body.where,
-		'how':req.body.how
+		'anythingElse':req.body.anythingElse
 	});
 };
 
@@ -94,4 +103,10 @@ function generateURL() {
 		url += choices.charAt(Math.floor(Math.random() * choices.length));
 		
 	return url;
+}
+
+function choose() {
+  var pull = Math.floor(Math.random() * 3);
+  if(pull === 0) return "";
+  return people[Math.floor(Math.random() * people.length)];
 }
