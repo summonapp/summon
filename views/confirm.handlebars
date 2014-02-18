@@ -31,28 +31,25 @@
 		<div class="content">
       <div class='head' id='event'>Event Title</div>
       <div class='description' id='event-content'>{{eventTitle}}</div>
-
       <div class='head' id='what'>What</div>
       <div class='description' id='what-content'>{{what}}</div>
-
       <div class='head' id='when'>When</div>
       <div class='description' id='when-content'>{{when}}</div>
       <div class='head' id='where'>Where</div>
       <div class='description' id='where-content'>{{where}}</div>
       <div class='head' id='how'>How</div>
       <div class='description' id='how-content'>{{how}}</div>
-      
       <div align=center class="buttons">
-          <br>
-          <form method="post" action="/event/showCode">
-			      <input type="hidden" value={{eventTitle}} name="eventTitle"></input>
-			      <input type="hidden" value={{what}} name="what"></input>
-			      <input type="hidden" value={{when}} name="when"></input>
-			      <input type="hidden" value={{where}} name="where"></input>
-			      <input type="hidden" value={{how}} name="how"></input>
-			      <button type="submit" formaction="/event/create">Back</button>
-				    <button type="submit">Create</button>
-					</form>
+        <br>
+        <form method="post" action="/event/showCode">
+		      <input type="hidden" value={{eventTitle}} name="eventTitle"></input>
+		      <input type="hidden" value={{what}} name="what"></input>
+		      <input type="hidden" value={{when}} name="when"></input>
+		      <input type="hidden" value={{where}} name="where"></input>
+		      <input type="hidden" value={{how}} name="how"></input>
+		      <button type="submit" formaction="/event/create">Back</button>
+			    <button type="submit">Create</button>
+				</form>
       </div>
     </div>
 	</body>

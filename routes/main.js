@@ -8,14 +8,13 @@ exports.show = function(req, res) {
 		if(allEvents[eventIndex])
 			events.push(allEvents[eventIndex]);
 	}
-	
 	res.render('main', {'events':events});
-}
+};
 
 function findEvent(url) {
-	for(var i = 0; i < allEvents.length; i++) {
+	for(var i = 0; i < allEvents.length; i++)
 		if(allEvents[i].url == url)
 			return i;
-	}
+
 	return -1;
 }

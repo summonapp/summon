@@ -29,38 +29,33 @@
 	<body>
 		<div class = 'banner'>View Event</div>
     <div class='content'>
-      <div id='notification-accept'>
-        You accepted. Great!
-      </div>
-      <div id='notification-reject'>
-        You declined, BOOO!
-      </div>
+      <div id='notification-accept'>You accepted. Great!</div>
+      <div id='notification-reject'>You declined, BOOO!</div>
 
       {{#if respond}}
-      <div id='pending'></div>
-      <div class='head' id='event'>Event Title</div>
-      <div class='description' id='event-content'>{{title}}</div>
-      <div class='head' id='what'>What</div>
-      <div class='description' id='what-content'>{{what}}</div>
-      <div class='head' id='when'>When</div>
-      <div class='description' id='when-content'>{{when}}</div>
-      <div class='head' id='where'>Where</div>
-      <div class='description' id='where-content'>{{where}}</div>
-      <div class='head' id='how'>How</div>
-      <div class='description' id='how-content'>{{how}}</div>
-
-      <div class='head' id='attending'>Attending</div>
-      <div class='description' id='attending-content'>
-        <div align=center>
-          {{#if attending.length}}
-						{{#each attending}}
-							<div>{{this}}</div>
-						{{/each}}
-					{{else}}
-						No one is attending yet.
-					{{/if}}
-        </div>   
-    	</div>
+        <div id='pending'></div>
+        <div class='head' id='event'>Event Title</div>
+        <div class='description' id='event-content'>{{title}}</div>
+        <div class='head' id='what'>What</div>
+        <div class='description' id='what-content'>{{what}}</div>
+        <div class='head' id='when'>When</div>
+        <div class='description' id='when-content'>{{when}}</div>
+        <div class='head' id='where'>Where</div>
+        <div class='description' id='where-content'>{{where}}</div>
+        <div class='head' id='how'>How</div>
+        <div class='description' id='how-content'>{{how}}</div>
+        <div class='head' id='attending'>Attending</div>
+        <div class='description' id='attending-content'>
+          <div align=center>
+            {{#if attending.length}}
+  						{{#each attending}}
+  						  <div>{{this}}</div>
+  						{{/each}}
+  					{{else}}
+  						No one is attending yet.
+  					{{/if}}
+          </div>   
+      	</div>
     	{{else}}
 	    	Event not found, or you're not invited.
 			{{/if}}

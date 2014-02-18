@@ -18,29 +18,23 @@
     <script src="/js/shared.js"></script>
 
     <!--content-->
-     <div class='title'>
-        <div class='butt'>
-            <a onclick="javascript:window.history.back();return false;" STYLE="text-decoration: none"><-</a> 
-        </div>
-    SUMMON 
-       <div class='home'>
-           <a href="/"><img src="/images/home.png"></a>
-       </div>
+    <div class='title'>
+      <div class='butt'>
+        <a onclick="javascript:window.history.back();return false;" STYLE="text-decoration: none"><-</a> 
+      </div>
+      SUMMON 
+      <div class='home'>
+        <a href="/"><img src="/images/home.png"></a>
+      </div>
     </div>
 	</head>
-
-
-
-
 	<body>
 		<div class='banner'>Add Event Code</div>
 		<div id='code' class='overlay'>
 			<form align=center method="post" action="/event/addEvent">
-	      <input type="text" placeholder="Enter code" name="eventCode"></input><br>
+	      <input type="text" placeholder="Enter code" name="eventCode" required></input><br>
 		    <input type="submit" value="Add Event"></input>
 			</form>
 		</div>
 	</body>
 </html>
-
-

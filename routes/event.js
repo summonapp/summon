@@ -15,7 +15,7 @@ exports.eventInfo = function(req, res) {
 	}
 	else
 		res.render('event', {'respond':0});
-}
+};
 
 exports.showCode = function(req, res) {
 	var newURL = generateURL();
@@ -28,17 +28,16 @@ exports.showCode = function(req, res) {
 		'where':req.body.where,
 		'how':req.body.how,
 		'attending':[]
-	}
+	};
 	allEvents.push(newEvent);
 	myEvents.push(newURL);
 	res.render('showCode', newEvent);
-}
+};
 
 exports.createEvent = function(req, res) {
 	var type = "placeholder";
-	if(req.body.eventTitle) {
+	if(req.body.eventTitle)
 		type = "value";
-	}
 	res.render('createEvent', {
 		'type':type,
 		'eventTitle':req.body.eventTitle||"Title",
@@ -47,11 +46,11 @@ exports.createEvent = function(req, res) {
 		'where':req.body.where||"Where",
 		'how':req.body.how||"How"
 	});
-}
+};
 
 exports.addCode = function(req, res) {
 	res.render('addCode');
-}
+};
 
 exports.addEvent = function(req, res) {
 	if(findEvent(req.body.eventCode) >= 0) {
@@ -61,7 +60,7 @@ exports.addEvent = function(req, res) {
 	else {
 		res.render('event', {'respond':0});
 	}
-}
+};
 
 exports.confirm = function(req, res) {
 	res.render('confirm', {
@@ -71,20 +70,19 @@ exports.confirm = function(req, res) {
 		'where':req.body.where,
 		'how':req.body.how
 	});
-}
+};
 
 function hasEvent(url) {
-	for(var i = 0; i < myEvents.length; i++) {
+	for(var i = 0; i < myEvents.length; i++)
 		if(myEvents[i]==url) return true;
-	}
 	return false;
 }
 
 function findEvent(url) {
-	for(var i = 0; i < allEvents.length; i++) {
+	for(var i = 0; i < allEvents.length; i++)
 		if(allEvents[i].url == url)
 			return i;
-	}
+			
 	return -1;
 }
 
@@ -92,8 +90,8 @@ function generateURL() {
 	var url = "";
 	var choices = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
-	for(var i=0; i<7; i++) {
+	for(var i=0; i<7; i++)
 		url += choices.charAt(Math.floor(Math.random() * choices.length));
-	}
+		
 	return url;
 }

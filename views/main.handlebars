@@ -16,25 +16,25 @@
     <script src="/js/shared.js"></script>
     
     <!--content-->
-   <div class='title'>SUMMON</div>
+    <div class='title'>SUMMON</div>
 	</head>
 	<body>
 		<div class=container>
       <div class=overlay>
-          <h2>My Events</h2>
-          {{#if events.length}}
-						{{#each events}}
-							<div class=event>
-			          <a href="/event/{{url}}" STYLE="text-decoration: none">{{title}}</a>
-			        </div>
-						{{/each}}
-					{{else}}
-						<div>You currently have no event</div>
-					{{/if}}
-          <br><br>
+        <h2>My Events</h2>
+        {{#if events.length}}
+					{{#each events}}
+						<div class=event>
+			        <a href="/event/{{url}}" STYLE="text-decoration: none">{{title}}</a>
+			      </div>
+					{{/each}}
+				{{else}}
+					<div>You currently have no event</div>
+				{{/if}}
+        <br><br>
         <div class="buttons">
-            <a href="/event/create" align=center STYLE="text-decoration: none">Create Event</a>
-            <a href="/event/addCode" align=center STYLE="text-decoration: none">Add Code</a>
+          <a href="/event/create" align=center STYLE="text-decoration: none">Create Event</a>
+          <a href="/event/addCode" align=center STYLE="text-decoration: none">Add Code</a>
         </div>
       </div>
     </div>

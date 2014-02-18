@@ -23,19 +23,18 @@
     	SUMMON 
       <div class='home'>
         <a href="/"><img src="/images/home.png"></a>
-       </div>
+      </div>
     </div> 
 	</head>
 	<body>
 		<div class = 'banner'>Create Event</div>
       <div class='content container overlay'>
 				<form method="post" action="/event/confirm">
-					<h3>Add an event</h3>
-		      <input type="text" {{type}}={{eventTitle}} name="eventTitle"></input><br>
-		      <input type="text" {{type}}={{what}} name="what"></input><br>
-		      <input type="text" {{type}}={{when}} name="when"></input><br>
-		      <input type="text" {{type}}={{where}} name="where"></input><br>
-		      <input type="text" {{type}}={{how}} name="how"></input><br>
+		      <input type="text" {{type}}={{eventTitle}} name="eventTitle" required></input><br>
+		      <input type="text" {{type}}={{what}} name="what" required></input><br>
+		      <input type="text" {{type}}={{when}} name="when" required></input><br>
+		      <input type="text" {{type}}={{where}} name="where" required></input><br>
+		      <input type="text" {{type}}={{how}} name="how" required></input><br>
 			    <input class="buttons" type="submit" value="Continue"></input>
 				</form>
 			</div>
