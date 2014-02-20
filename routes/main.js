@@ -1,5 +1,6 @@
 var allEvents = require('../events.json');
 var myEvents = require('../myEvents.json');
+var usernames = require('../usernames.json');
 
 exports.show = function(req, res) {
 	var events = [];
@@ -9,6 +10,14 @@ exports.show = function(req, res) {
 			events.push(allEvents[eventIndex]);
 	}
 	res.render('main', {'events':events});
+};
+
+exports.signin = function(req, res) {
+  res.render("signin");
+};
+
+exports.signup = function(req, res) {
+  res.render('signup', {'usernames': usernames});
 };
 
 function findEvent(url) {

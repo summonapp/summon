@@ -1,0 +1,121 @@
+body {
+ /* font-family: 'Source Sans Pro', 'Lato', sans-serif;*/
+  font-family: 'Annie Use Your Telescope', sans-serif;
+  background-image:url('../images/posty_edit.jpg');
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+  background-position:center; 
+}
+
+h1{
+  font-family: 'Annie Use Your Telescope', sans-serif;
+  color: #FFFFFF;
+  text-align: center;
+  background: #00CCFF;
+}
+
+
+
+
+h2 {
+   width: 100%; 
+   text-align: center; 
+   font-family: 'Annie Use Your Telescope', sans-serif;
+} 
+
+
+.content {
+  margin: 5%;
+}
+
+.container {
+    text-align:center;
+} 
+
+.overlay {
+    background: rgba(255, 255, 255, 0.7);
+    padding-bottom: 20px;
+    padding-top: 1px;
+    -webkit-box-shadow: 0px 4px 26px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 4px 26px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 4px 26px 0px rgba(0,0,0,0.75);
+    border-radius: 5px;
+
+}
+
+.overlay2 {
+    background: rgba(255, 255, 255, 0.7);
+    padding-bottom: 1px;
+    padding-top: 1px;
+    -webkit-box-shadow: 0px 4px 26px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 4px 26px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 4px 26px 0px rgba(0,0,0,0.75);
+    border-radius: 5px;
+}
+
+hr {
+    width: 50%; 
+    height: 2px; 
+}
+
+
+
+.signInBut a{
+    color:#FFFFFF;
+    background-color: #FFA200; /*#aacfe4;*/
+    font-size:150%;
+    margin: 3px;
+    padding: 2px 10px;
+    font-family: 'Annie Use Your Telescope', sans-serif;
+    border-radius: 2px;
+    border-width:1px;
+    width: 200px;
+}
+
+.signUpBut a{
+    font-family: 'Annie Use Your Telescope', sans-serif;
+    color: #000000;
+    font-size: 150%;
+    text-align:center;
+    position:fixed; 
+    bottom: 5px; 
+    width:100%
+}
+
+.facebook
+{
+    background-color:#3B5998;
+    color:#FFFFFF;
+    font-size:150%;
+    margin: 3px;
+    padding: 2px 10px;
+    font-family: 'Annie Use Your Telescope', sans-serif;
+    border-radius: 2px;
+    border-width:1px;
+    text-align: center;
+ 
+}
+
+
+.title {
+    font-size:350%;
+    width:100%;
+    position:relative;
+    font-family: 'Annie Use Your Telescope', sans-serif;
+    color: #000000;
+    text-align: center;
+
+    
+/*-webkit-box-shadow: 0px 4px 26px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 4px 26px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 4px 26px 0px rgba(0,0,0,0.75);*/
+}
+
+
+input {
+    font-size:12px;
+    padding:4px 2px;
+    border:solid 1px #aacfe4;
+    width:200px;
+    margin:2px 0 10px 10px;
+}

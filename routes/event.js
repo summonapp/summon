@@ -1,6 +1,7 @@
 var allEvents = require('../events.json');
 var myEvents = require('../myEvents.json');
 var people = require('../people.json');
+var usernames = require('../usernames.json');
 
 exports.eventInfo = function(req, res) {
 	var eventIndex = findEvent(req.params.url);
@@ -61,6 +62,11 @@ exports.addCode = function(req, res) {
 	res.render('addCode');
 };
 
+exports.signup = function(req, res) {
+    console.log(usernames);
+	res.render('signup', usernames);
+};
+
 exports.addEvent = function(req, res) {
 	if(findEvent(req.body.eventCode) >= 0) {
 		myEvents.push(req.body.eventCode);
@@ -109,4 +115,16 @@ function choose() {
   var pull = Math.floor(Math.random() * 3);
   if(pull === 0) return "";
   return people[Math.floor(Math.random() * people.length)];
+}
+
+function checkNameExists () {
+    alert("Entered function!");
+    var name = document.getElementById("username").value;
+    console.log(name);
+    for (var i = 0; i < usernames.length; i++) {
+        if (name == usernames[i]) {
+            alert("This username is already taken! Please select another one.");
+            document.getElementById("username").value = "";
+        }
+    }
 }

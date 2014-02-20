@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <!--css-->
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/bootstrap-theme.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope|Vibur' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300italic' rel='stylesheet' type='text/css'>
+    <link href="/css/signUp.css" rel="stylesheet" type="text/css">
+
+    <!--js-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="/js/shared.js"></script>
+    <script src="../routes/event.js"></script>
+    <script src="../routes/main.js"></script>
+
+    <!--content-->
+    <div class='title'>
+      <div class='butt'>
+            <a onclick="javascript:window.history.back();return false;" STYLE="text-decoration: none"><-</a> 
+      </div>
+      SUMMON 
+    </div>
+    
+    
+	</head>
+	
+	<body>
+		<br>
+		<div id='code' class='overlay'>
+		<h2>SIGN UP</h2>
+			<form align=center method="post" action="/event/main">
+			  <input type="text" placeholder="Name" name="name" required></input><br>
+	      <input id = "username" type="text" placeholder="User Name" name="userName" required></input><br>
+	      <input type="text" placeholder="Password" name="password" type = "password" required></input><br>
+		    <br>
+			
+			 
+			<div class='createAcc'>
+			        <a onclick = "checkNameExists();">Create Account</a>
+			 <!-- <button onclick = "checkNameExists();">Create Account</button> -->
+			 </div>
+			 </form>
+		</div>
+		
+		<script>
+        function checkNameExists () {
+            var name = document.getElementById("username").value;
+            console.log(name);
+            console.log({{usernames}});
+            for (var i = 0; i < usernames.length; i++) {
+                console.log(usernames[i]);
+                if (name == usernames[i]) {
+                    alert("This username is already taken! Please select another one.");
+                    document.getElementById("username").value = "";
+                }
+            }
+        }
+	</script>
+	</body>
+</html>

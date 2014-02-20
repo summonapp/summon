@@ -1,0 +1,33 @@
+1. Have the home page empty
+    -Add a section for the events you have planned vs. the events you are attending
+
+2. For create event have the fields be:
+    Tite
+    Description
+    When
+    Where
+    Anything Else?
+    
+    confirm, createEvent, event [TAKEN CARE OF]
+
+3. After you click confirm, and you have the event code, and you click on 'View Event'
+   what gets displayed is only the first word of the string. For example, Shazzy Birthday for
+   the event title, only shows 'Shazzy' [TAKEN CARE OF]
+   
+4. If you plan the event, you should have an option to accept or reject, because then it
+put its as an event you are attending [TAKEN CARE OF]
+
+5. Maybe on the homepage for events they are attending, they can have an accept section
+and a reject section. maybe a pending option if they dont click either button?
+    [TAKEN CARE OF]
+
+6. Should we remove the option where we show who is attending? Users wanted that feature
+but then we would need a login option/include facebook option [TAKEN CARE OF]
+
+7. Back button re-submits form
+
+8. Page reloads before javascript executes ("You attended yay!" or "You declined. Boo!")
+
+9. Status is not too visible ("you are attending", "you rejected", "pending")
+
+10. Javascript
