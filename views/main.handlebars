@@ -20,24 +20,28 @@
 	</head>
 	<body>
 	  <br><br>
-		<div class=container>
-      <div class=overlay>
+	<div class=container>
+      <div class=overlay2>
         <h2>My Events</h2>
         {{#if events.length}}
 					{{#each events}}
 						<div class=event>
-			        <a href="/event/{{url}}" id = "response{{respond}}" STYLE="text-decoration: none">{{title}} ></a>
-			      </div>
+			                <a href="/event/{{url}}" id = "response{{respond}}" STYLE="text-decoration: none">{{title}} ></a>
+			            </div>
 					{{/each}}
 				{{else}}
 					<div>You currently have no event</div>
 				{{/if}}
-        <br>
+   
+       
+     <br>
+        
         <div class="buttons">
-          <a href="/event/create" align=center STYLE="text-decoration: none">Create Event</a>
-          <a href="/event/addCode" align=center STYLE="text-decoration: none">Add Code</a>
+          <a href="/event/create" align=center STYLE="text-decoration: none">plan event</a>
+          <a href="/event/addCode" align=center STYLE="text-decoration: none">add</a>
         </div>
-      </div>
+       </div>
+     
     </div>
 	</body>
 </html>

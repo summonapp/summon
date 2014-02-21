@@ -25,19 +25,7 @@ $(document).ready(function(){
     }
   }
   
-  $("#accept").click(function(){
-    $("#notification-reject").hide();
-    $("#notification-accept").slideDown();
-    $("#reject").show();
-    $("#accept").hide();
-  });
-  
-  $("#reject").click(function(){
-    $("#notification-accept").hide();
-    $("#notification-reject").slideDown();
-    $("#reject").hide();
-    $("#accept").show();
-  });
+
   
   $("#event").click(function(){
     if($('#event-content').is(':visible'))

@@ -19,22 +19,23 @@
 
     <!--content-->
     <div class='title'>
-      <div class='butt'>
-     <!--   <a onclick="javascript:window.history.back();return false;" STYLE="text-decoration: none"><-</a> -->
-      </div>
+    <!--  <div class='butt'>
+          <a onclick="javascript:window.history.back();return false;" STYLE="text-decoration: none"><-</a> 
+      </div> -->
       SUMMON 
-      <div class='home'>
-        <a href="/"><img src="/images/home.png"></a>
-      </div>
+   
     </div>
 	</head>
 	<body>
 		<div class='banner'>Add Event Code</div>
+		<div class='container'>
 		<div id='code' class='overlay'>
+		<br>
 			<form align=center method="post" action="/event/addEvent">
-	      <input type="text" placeholder="Enter code" name="eventCode" required></input><br>
-		    <input type="submit" value="Add Event"></input>
+	           <input type="text" placeholder="Enter code" name="eventCode" required></input><br>
+		       <input class = 'addEvent' type="submit" value="Add Event"></input>
 			</form>
+		</div>
 		</div>
 	</body>
 </html>

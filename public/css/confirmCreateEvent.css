@@ -1,3 +1,9 @@
+body {
+     font-family: 'Annie Use Your Telescope', sans-serif;
+}
+
+
+
 .head {
      background: rgba(245, 221, 184, 0.7);
      text-align: center;
@@ -17,15 +23,20 @@
     padding: 5px;
 }
 
+
+
+
+
 .banner {
     font-family: 'Annie Use Your Telescope', sans-serif;
-    font-size: 300%;
+    font-size: 250%;
     padding-top: 30px;
-    margin-left:auto;
-    margin-right:auto;
+    margin-left: 20px;
     width: 300px;
     height: 120px;
     text-align: center;
+    margin-left:auto;
+    margin-right:auto;
     background:url('../images/paper1.png');
     background-repeat: no-repeat;
     position:relative;
@@ -34,3 +45,31 @@
 a:hover {
     color: #0099FF;
 }
+
+
+button {
+    color:#FFFFFF;
+    background-color: #FFA200;
+    font-size:150%;
+    margin: 3px;
+    padding: 2px 10px;
+    font-family: 'Annie Use Your Telescope', sans-serif;
+    border-radius: 2px;
+    border-width:0;
+    width: 60%;
+
+}
+
+
+.continue {
+    color:#FFFFFF;
+    background-color: #FFA200; /*#aacfe4;*/
+    font-size:150%;
+    margin: 3px;
+    padding: 2px 10px;
+    font-family: 'Annie Use Your Telescope', sans-serif;
+    border-width: 0;
+    border-radius: 2px;
+    width: 200px;
+}
+

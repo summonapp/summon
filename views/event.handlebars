@@ -17,20 +17,15 @@
     
     <!--content-->
     <div class='title'>
-      <div class='butt'>
-      <!--  <a onclick="javascript:window.history.back();return false;" STYLE="text-decoration: none"><-</a> -->
-      </div>
     	SUMMON 
-      <div class='home'>
-        <a href="/"><img src="/images/home.png"></a>
-      </div>
+    	<div class='home'><a href= '/event/main'><img src=/images/home.png></a></div>
     </div> 
+    
 	</head>
 	<body>
 		<div class = 'banner'>View Event</div>
     <div class='content'>
-      <div id='notification-accept'>You accepted. Great!</div>
-      <div id='notification-reject'>You declined, BOOO!</div>
+
 
       {{#if respond}}
         <div id='pending'></div>
@@ -57,7 +52,13 @@
           </div>   
       	</div>
     	{{else}}
-	    	Event not found, or you're not invited.
+    	    <div class='error'>
+    	    OOPS! Event Not Found!
+	    	</div>
+	    	<br>
+	    	<div class='try'>
+	    	<a href=/event/addCode>Try Again?</a>
+	    	</div>
 			{{/if}}
 			<br>
       <div align =center id="button"></div>
@@ -72,17 +73,19 @@
 				else if({{respond}} == 2)
 					return "<form method='post'><input type='hidden' value=3 name='respond'></input><button id='reject' formaction='/event/{{url}}'>Reject</button></form>";
 				<!--Declined event-->
-				else
+				else if({{respond}} == 3)
 					return "<form method='post'><input type='hidden' value=2 name='respond'></input><button id='accept' formaction='/event/{{url}}'>Accept</button></form>";
+			    else
+			      return "<form method='post'><input type='hidden' value=3 name='respond'></input><button id='reject' formaction='/event/{{url}}'>Reject</button></form><form method='post'><input type='hidden' value=2 name='respond'></input><button id='accept' formaction='/event/{{url}}'>Accept</button></form>"; 
 			}
 			function pendingEvent() {
 				<!--Pending event-->
 				if({{respond}} == 1)
-					return "This event is pending.";
+					return "<div class='pending'>This event is pending.</div>";
 				else if({{respond}} == 2)
-					return "You are attending."
+					return "<div class='accept'>You are attending.</div>"
 				else if({{respond}} == 3)
-					return "You are not attending."
+					return "<div class='reject'>You are not attending.</div>"
 				return ""
 			}
 			document.getElementById("button").innerHTML=myFunction();
