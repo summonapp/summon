@@ -18,10 +18,16 @@ h1{
 
 
 h2 {
-   width: 100%; 
+   width: 108%; 
    text-align: center; 
    font-family: 'Annie Use Your Telescope', sans-serif;
 } 
+
+h3 {
+   width: 100%; 
+   text-align: center; 
+   font-family: 'Annie Use Your Telescope', sans-serif;
+}
 
 
 .content {
@@ -82,9 +88,9 @@ hr {
     width:100%
 }
 
-.facebook
+.quick
 {
-    background-color:#3B5998;
+    background-color:#0099FF;
     color:#FFFFFF;
     font-size:150%;
     margin: 3px;
