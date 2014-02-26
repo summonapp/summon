@@ -41,7 +41,7 @@ app.get('/event/main', main.show);
 app.post('/event/main', main.show);
 app.get('/event/signup', main.signup);
 app.post('/event/signup', main.signup);
-app.post('/event/showCode', event.showCode);
+app.post('/event/sanythingElseCode', event.showCode);
 app.get('/event/create', event.createEvent);
 app.post('/event/create', event.createEvent);
 app.post('/event/confirm', event.confirm);

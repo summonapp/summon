@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html> 
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
     <!--css-->
@@ -37,8 +37,8 @@
         <div class='description' id='when-content'>{{when}}</div>
         <div class='head' id='where'>Where</div>
         <div class='description' id='where-content'>{{where}}</div>
-        <div class='head' id='how'>Anything Else?</div>
-        <div class='description' id='how-content'>{{how}}</div>
+        <div class='head' id='anythingElse'>Anything Else?</div>
+        <div class='description' id='anythingElse-content'>{{anythingElse}}</div>
         <div class='head' id='attending'>Attending</div>
         <div class='description' id='attending-content'>
           <div align=center>
@@ -91,5 +91,8 @@
 			document.getElementById("button").innerHTML=myFunction();
 			document.getElementById("pending").innerHTML=pendingEvent();
 		</script>
+		<div class='goback'>
+	    	<a href= '/event/main' STYLE="text-decoration: none">Back to My Events</a>
+		</div>
 	</body>
 </html>

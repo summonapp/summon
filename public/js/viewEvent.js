@@ -1,11 +1,11 @@
-$(document).ready(function(){
+/*$(document).ready(function(){
   var myContent=new Array(
      "#event-content"
     ,"#who-content"
     ,"#what-content"
     ,"#when-content"
     ,"#where-content"
-    ,"#how-content"
+    ,"#anythingElse-content"
     ,"#attending-content"
   );
   
@@ -62,11 +62,11 @@ $(document).ready(function(){
       change("#where-content");
   });
   
-  $("#how").click(function(){
-    if($('#how-content').is(':visible'))
-      $("#how-content").slideUp();
+  $("#anythingElse").click(function(){
+    if($('#anythingElse-content').is(':visible'))
+      $("#anythingElse-content").slideUp();
     else
-      change("#how-content");
+      change("#anythingElse-content");
   });
   
   
@@ -76,4 +76,4 @@ $(document).ready(function(){
     else
       change("#attending-content");
   });
-});
+});*/

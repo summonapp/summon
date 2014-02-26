@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,7 +16,11 @@
     
     <!--content-->
     <div class='title'>
-    	SUMMON  </div> 
+    	SUMMON
+    	<div class='home'>
+        <a href="/event/main"><img src="/images/home.png"></a>
+      </div>
+    </div> 
     	
     	
 	</head>
@@ -28,7 +31,8 @@
 			<form method="post" action="/event/confirm">
 		      <input type="text" {{type}}= "{{eventTitle}}" name="eventTitle" required></input><br>
 		      <input type="text" {{type}}= "{{what}}" name="what" required></input><br>
-		      <input type="text" {{type}}= "{{when}}" name="when" required></input><br>
+		      Date and Time: <br>
+		      <input type="datetime-local" {{type}}= "{{when}}" STYLE = "color:gray" name="when" required></input><br>
 		      <input type="text" {{type}}= "{{where}}" name="where" required></input><br>
 		      <input type="text" {{type}}="{{anythingElse}}" name="anythingElse"></input><br>
 			  <input class="continue" type="submit" value="Continue"></input>

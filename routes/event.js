@@ -36,7 +36,7 @@ exports.showCode = function(req, res) {
 		'what':req.body.what,
 		'when':req.body.when,
 		'where':req.body.where,
-		'how':req.body.how,
+		'anythingElse':req.body.anythingElse,
 		'attending':["you"]
 	};
 	allEvents.push(newEvent);
@@ -54,7 +54,7 @@ exports.createEvent = function(req, res) {
 		'what':req.body.what||"What",
 		'when':req.body.when||"When",
 		'where':req.body.where||"Where",
-		'anythingElse':req.body.how||"Anything Else?"
+		'anythingElse':req.body.anythingElse||"Anything Else?"
 	});
 };
 

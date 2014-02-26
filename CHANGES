@@ -1,33 +1,21 @@
-1. Have the home page empty
-    -Add a section for the events you have planned vs. the events you are attending
+Sign Up link needs to be more prominent in the sign in page
 
-2. For create event have the fields be:
-    Tite
-    Description
-    When
-    Where
-    Anything Else?
-    
-    confirm, createEvent, event [TAKEN CARE OF]
+The word "or" in the sign in page is not properly centered
 
-3. After you click confirm, and you have the event code, and you click on 'View Event'
-   what gets displayed is only the first word of the string. For example, Shazzy Birthday for
-   the event title, only shows 'Shazzy' [TAKEN CARE OF]
-   
-4. If you plan the event, you should have an option to accept or reject, because then it
-put its as an event you are attending [TAKEN CARE OF]
+The top navigation banner changes size between main page and everything else
 
-5. Maybe on the homepage for events they are attending, they can have an accept section
-and a reject section. maybe a pending option if they dont click either button?
-    [TAKEN CARE OF]
+Make font bigger
 
-6. Should we remove the option where we show who is attending? Users wanted that feature
-but then we would need a login option/include facebook option [TAKEN CARE OF]
 
-7. Back button re-submits form
 
-8. Page reloads before javascript executes ("You attended yay!" or "You declined. Boo!")
 
-9. Status is not too visible ("you are attending", "you rejected", "pending")
+Taylor's comments
+hard to read the black writing in signin page
+pop up a calendar to choose date of event, for date and time
+spread out the buttons in confirm button
+home button
+back button
+wrong event code error checking
+clicking/slide down javascript annoying, want to view multiple things at once
 
-10. Javascript
+Rose's comments

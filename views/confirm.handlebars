@@ -14,7 +14,11 @@
             <script src="/js/mainFilled.js"></script>
             <script src="/js/shared.js"></script>
 
-            <div class='title'>SUMMON</div>
+            <div class='title'>SUMMON
+              <div class='home'>
+                <a href="/event/main"><img src="/images/home.png"></a>
+              </div>
+            </div>
         </head>
 	<body>
 	  <div class='banner'>Confirm Event</div>
@@ -27,18 +31,19 @@
       <div class='description' id='when-content'>{{when}}</div>
       <div class='head' id='where'>Where</div>
       <div class='description' id='where-content'>{{where}}</div>
-      <div class='head' id='how'>Anything Else?</div>
-      <div class='description' id='how-content'>{{anythingElse}}</div>
+      <div class='head' id='anythingElse'>Anything Else?</div>
+      <div class='description' id='anythingElse-content'>{{anythingElse}}</div>
       <div align=center class="buttons">
         <br>
-        <form method="post" action="/event/showCode">
+        <form method="post" action="/event/sanythingElseCode">
 		      <input type="hidden" value="{{eventTitle}}" name="eventTitle"></input>
 		      <input type="hidden" value="{{what}}" name="what"></input>
 		      <input type="hidden" value="{{when}}" name="when"></input>
 		      <input type="hidden" value="{{where}}" name="where"></input>
 		      <input type="hidden" value="{{anythingElse}}" name="anythingElse"></input>
-	
-		          <button type="submit" formaction="/event/create">Back</button>
+	        <br>
+		        <button type="submit" formaction="/event/create">Back</button>
+			      <br><br><br>
 			      <button type="submit">Create</button>
 			
 		  </form>

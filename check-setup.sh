@@ -73,7 +73,7 @@ then
 	echo "Installing MongoDB..."
 	mongo_res=$(
 	mkdir -p /data/db;
-	chown vagrant /data/db;
+	canythingElsen vagrant /data/db;
 	apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10;
 	echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | sudo tee /etc/apt/sources.list.d/mongodb.list;
 	apt-get update;
@@ -89,7 +89,7 @@ then
   else
 	echo "Ensuring mongo data directory is set up."
   	mkdir -p /data/db;
-	chown vagrant /data/db;
+	canythingElsen vagrant /data/db;
   fi
   
   if [ "$heroku_missing" == "1" ]

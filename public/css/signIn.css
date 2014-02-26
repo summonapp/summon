@@ -18,7 +18,7 @@ h1{
 
 
 h2 {
-   width: 108%; 
+   width: 100%; 
    text-align: center; 
    font-family: 'Annie Use Your Telescope', sans-serif;
 } 
@@ -83,8 +83,15 @@ hr {
     color: #000000;
     font-size: 150%;
     text-align:center;
-    position:fixed; 
-    bottom: 5px; 
+    width:100%
+}
+
+
+.signUpBut {
+    font-family: 'Annie Use Your Telescope', sans-serif;
+    color: #000000;
+    font-size: 100%;
+    text-align:center;
     width:100%
 }
 
