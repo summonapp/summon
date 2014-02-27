@@ -1,4 +1,4 @@
-/*$(document).ready(function(){
+$(document).ready(function(){
   var myContent=new Array(
      "#event-content"
     ,"#who-content"
@@ -76,4 +76,4 @@
     else
       change("#attending-content");
   });
-});*/
+});
