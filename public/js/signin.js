@@ -1,3 +1,5 @@
+'use strict';
+
 $(document).ready(function() {
 	initializePage();
 });
@@ -5,12 +7,15 @@ $(document).ready(function() {
 function initializePage() {
 	// your code here
 	$('.signUpBut').click(function() {
-		ga("send", "event", "signup", "click");
+	  alert("signup");
+		ga("send", "event", "signup", "clickSignup");
 	});
 	$('.signInBut').click(function() {
-		ga("send", "event", "signin", "click");
+		alert("signin");
+		ga("send", "event", "signin", "clickSignin");
 	});
 	$('.quick').click(function() {
-		ga("send", "event", "viewEvent", "click");
+		alert("quick");
+		ga("send", "event", "viewEvent", "clickQuick");
 	});
 }
